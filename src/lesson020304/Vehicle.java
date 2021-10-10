@@ -1,0 +1,76 @@
+package lesson020304;
+
+import java.time.LocalDateTime;
+import java.util.Objects;
+
+abstract class Vehicle {
+
+    private int size;
+    private String color;
+    private LocalDateTime creationDate;
+    private Person driver;
+
+    public Vehicle(int size, String color, LocalDateTime creationDate, Person driver) {
+        this.size = size;
+        this.color = color;
+        this.creationDate = creationDate;
+        this.driver = driver;
+    }
+
+    public int getSize() {
+        return size;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public LocalDateTime getCreationDate() {
+        return creationDate;
+    }
+
+    public void setCreationDate(LocalDateTime creationDate) {
+        this.creationDate = creationDate;
+    }
+
+    public Person getDriver() {
+        return driver;
+    }
+
+    public void setDriver(Person driver) {
+        this.driver = driver;
+    }
+
+    abstract int object(int o1, int o2, int o3);
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Vehicle vehicle = (Vehicle) o;
+        return size == vehicle.size && Objects.equals(color, vehicle.color) && Objects.equals(creationDate, vehicle.creationDate) && Objects.equals(driver, vehicle.driver);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(size, color, creationDate, driver);
+    }
+
+    @Override
+    public String toString() {
+        return "Vehicle{" +
+                "size=" + size +
+                ", color='" + color + '\'' +
+                ", creationDate=" + creationDate +
+                ", driver=" + driver +
+                '}';
+    }
+}
