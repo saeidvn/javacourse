@@ -1,13 +1,14 @@
-package lesson020304;
+package lessons;
 
 import java.time.LocalDateTime;
 import java.util.Objects;
 
-public class Suv extends Car implements Refuel, Engine, SportCar {
-    int engineVolume = 3500;
-    int cylinders = 8;
-    int speed = 280;
-    int gear = 6;
+public class Suv extends Car implements Refuelable, IEngine, ISportCar {
+
+    private int engineVolume = 3500;
+    private int cylinders = 8;
+    private int speed = 280;
+    private int gear = 6;
     private int tireSize;
 
     public Suv(

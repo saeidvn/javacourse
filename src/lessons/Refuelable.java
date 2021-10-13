@@ -1,9 +1,11 @@
-package lesson020304;
+package lessons;
 
-public interface Refuel {
+public interface Refuelable {
 
     void openTheFuelTank();
+
     void refuelCar();
+
     void closeTheFuelTank();
 
 }

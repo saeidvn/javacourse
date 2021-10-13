@@ -1,4 +1,4 @@
-package lesson020304;
+package lessons;
 
 public class TicketControl extends Person{
 
@@ -21,9 +21,9 @@ public class TicketControl extends Person{
     @Override
     public String toString() {
         return "TicketControl{" +
-                "name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", job='" + job + '\'' +
+                "name='" + getName() + '\'' +
+                ", surname='" + getSurname() + '\'' +
+                ", job='" + getJob() + '\'' +
                 '}';
     }
 }

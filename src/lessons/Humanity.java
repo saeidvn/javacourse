@@ -1,9 +1,11 @@
-package lesson020304;
+package lessons;
 
-public interface Human {
+public interface Humanity {
 
     void walk();
+
     void run();
+
     void talk();
 
 }

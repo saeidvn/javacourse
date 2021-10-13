@@ -1,8 +1,11 @@
-package lesson020304;
+package lessons;
 
-public interface Football {
+public interface Playable {
 
     void kick();
+
     void headKick();
+
     void pass();
+
 }

@@ -1,9 +1,9 @@
-package lesson020304;
+package lessons;
 
 import java.time.LocalDateTime;
 import java.util.Objects;
 
-public class Car extends Vehicle implements Refuel {
+public class Car extends Vehicle implements Refuelable {
 
     private String brand;
     private String model;

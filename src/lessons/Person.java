@@ -1,17 +1,17 @@
-package lesson020304;
+package lessons;
 
 import java.util.Objects;
 
-abstract class Person {
+public abstract class Person {
 
-    protected int age;
-    protected String name;
-    protected String surname;
-    protected String hairColor;
-    protected String eyeColor;
-    protected int height;
-    protected int weight;
-    protected String job;
+    private int age;
+    private String name;
+    private String surname;
+    private String hairColor;
+    private String eyeColor;
+    private int height;
+    private int weight;
+    private String job;
 
     public Person(int age,
                   String name,
@@ -112,7 +112,7 @@ abstract class Person {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Person person = (Person) o;
-        return age == person.age && height == person.height && weight == person.weight && Objects.equals(name, person.name) && Objects.equals(surname, person.surname) && Objects.equals(hairColor, person.hairColor) && Objects.equals(eyeColor, person.eyeColor) && Objects.equals(job, person.job);
+        return age == person.age && height == person.height && weight == person.weight && Objects.equals(name, person.name) && Objects.equals(surname, person.surname);
     }
 
     @Override

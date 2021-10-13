@@ -1,4 +1,4 @@
-package lesson020304;
+package lessons;
 
 public class MetroDriver extends Person {
 
@@ -21,10 +21,10 @@ public class MetroDriver extends Person {
     @Override
     public String toString() {
         return "MetroDriver{" +
-                "age=" + age +
-                ", name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", job='" + job + '\'' +
+                "age=" + getAge() +
+                ", name='" + getName() + '\'' +
+                ", surname='" + getSurname() + '\'' +
+                ", job='" + getJob() + '\'' +
                 '}';
     }
 }

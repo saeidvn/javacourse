@@ -1,9 +1,9 @@
-package lesson020304;
+package lessons;
 
-public class Police extends Person implements Football {
+public class Police extends Person implements Playable {
 
-    int policeId;
-    String policeName;
+    private int policeId;
+    private String policeName;
 
     public Police(int policeId, String policeName) {
         super(0,
@@ -41,12 +41,10 @@ public class Police extends Person implements Football {
 
     @Override
     public void headKick() {
-
     }
 
     @Override
     public void pass() {
-
     }
 
     @Override
@@ -57,7 +55,7 @@ public class Police extends Person implements Football {
     @Override
     public String toString() {
         return "Police{" +
-                "hairColor='" + hairColor + '\'' +
+                "hairColor='" + getHairColor() + '\'' +
                 '}';
     }
 }

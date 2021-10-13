@@ -1,11 +1,10 @@
-package lesson020304;
+package lessons;
 
 import java.time.LocalDateTime;
 
 public class MainClass {
 
     public static void  main(String[] args) {
-
 
         TicketCounter ticketCounter1 = new TicketCounter(
                 21,
@@ -162,7 +161,7 @@ public class MainClass {
 
         Police[] policeMan = new Police[6];
 
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < policeMan.length; i++) {
             policeMan[i] = new Police(i+1,"Policeman " + i);
             System.out.println(policeMan);
         }

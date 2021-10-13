@@ -1,4 +1,4 @@
-package lesson020304;
+package lessons;
 
 public class CarDriver extends Person {
 
@@ -21,14 +21,14 @@ public class CarDriver extends Person {
     @Override
     public String toString() {
         return "CarDriver{" +
-                "age=" + age +
-                ", name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", hairColor='" + hairColor + '\'' +
-                ", eyeColor='" + eyeColor + '\'' +
-                ", height=" + height +
-                ", weight=" + weight +
-                ", job='" + job + '\'' +
+                "age=" + getAge() +
+                ", name='" + getName() + '\'' +
+                ", surname='" + getSurname() + '\'' +
+                ", hairColor='" + getHairColor() + '\'' +
+                ", eyeColor='" + getHairColor() + '\'' +
+                ", height=" + getHeight() +
+                ", weight=" + getWeight() +
+                ", job='" + getJob() + '\'' +
                 '}';
     }
 

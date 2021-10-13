@@ -1,7 +1,11 @@
-package lesson020304;
+package lessons;
 
-public interface SportCar {
+public interface ISportCar {
+
     void body();
+
     void soundSystem();
+
     void wheels();
+
 }

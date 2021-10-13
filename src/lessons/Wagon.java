@@ -1,11 +1,11 @@
-package lesson020304;
+package lessons;
 
 import java.util.Objects;
 
 public class Wagon {
 
-    String wagonName;
-    int wagonId;
+    private String wagonName;
+    private int wagonId;
 
     public Wagon(String wagonName, int wagonId) {
         this.wagonName = wagonName;

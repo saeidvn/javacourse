@@ -1,4 +1,4 @@
-package lesson020304;
+package lessons;
 
 import java.time.LocalDateTime;
 import java.util.Arrays;

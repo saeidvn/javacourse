@@ -1,10 +1,13 @@
-package lesson020304;
+package lessons;
 
-public interface Engine {
+public interface IEngine {
 
     void engineVolume(int newValue);
+
     void cylinders(int newValue);
+
     void changeGear(int newValue);
+
     void speedUp(int increment);
 
 }

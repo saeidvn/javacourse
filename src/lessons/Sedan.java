@@ -1,13 +1,14 @@
-package lesson020304;
+package lessons;
 
 import java.time.LocalDateTime;
 import java.util.Objects;
 
-public class Sedan extends Car implements  Refuel, Engine, SportCar {
-    int engineVolume = 0;
-    int cylinders = 0;
-    int speed = 0;
-    int gear = 1;
+public class Sedan extends Car implements Refuelable, IEngine, ISportCar {
+
+    private int engineVolume = 0;
+    private int cylinders = 0;
+    private int speed = 0;
+    private int gear = 1;
     private Boolean trunk;
 
     public Sedan(
@@ -98,7 +99,7 @@ public class Sedan extends Car implements  Refuel, Engine, SportCar {
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
         Sedan sedan = (Sedan) o;
-        return engineVolume == sedan.engineVolume && cylinders == sedan.cylinders && speed == sedan.speed && gear == sedan.gear && Objects.equals(trunk, sedan.trunk);
+        return engineVolume == sedan.engineVolume && cylinders == sedan.cylinders && Objects.equals(trunk, sedan.trunk);
     }
 
     @Override

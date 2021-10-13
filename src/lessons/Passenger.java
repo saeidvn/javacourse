@@ -1,8 +1,8 @@
-package lesson020304;
+package lessons;
 
 import java.util.Objects;
 
-public class Passenger extends Person implements Human {
+public class Passenger extends Person implements Humanity {
 
     private Ticket ticket;
 
@@ -42,13 +42,11 @@ public class Passenger extends Person implements Human {
     @Override
     public String toString() {
         return "Passenger{" +
-                "age=" + age +
-                ", name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
+                "age=" + getAge() +
+                ", name='" + getName() + '\'' +
+                ", surname='" + getSurname() + '\'' +
                 '}';
     }
-
-
 
     public Ticket getTicket() {
         return ticket;

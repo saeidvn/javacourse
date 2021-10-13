@@ -1,9 +1,9 @@
-package lesson020304;
+package lessons;
 
 import java.time.LocalDateTime;
 import java.util.Objects;
 
-abstract class Vehicle {
+public abstract class Vehicle {
 
     private int size;
     private String color;
@@ -56,7 +56,7 @@ abstract class Vehicle {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Vehicle vehicle = (Vehicle) o;
-        return size == vehicle.size && Objects.equals(color, vehicle.color) && Objects.equals(creationDate, vehicle.creationDate) && Objects.equals(driver, vehicle.driver);
+        return size == vehicle.size && Objects.equals(creationDate, vehicle.creationDate);
     }
 
     @Override

@@ -1,4 +1,4 @@
-package lesson020304;
+package lessons;
 
 public class TicketCounter extends Person {
 
@@ -21,9 +21,9 @@ public class TicketCounter extends Person {
     @Override
     public String toString() {
         return "TicketCounter{" +
-                "surname='" + surname + '\'' +
-                ", eyeColor='" + eyeColor + '\'' +
-                ", job='" + job + '\'' +
+                "surname='" + getSurname() + '\'' +
+                ", eyeColor='" + getEyeColor() + '\'' +
+                ", job='" + getJob() + '\'' +
                 '}';
     }
 }
