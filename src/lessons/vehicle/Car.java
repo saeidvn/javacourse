@@ -1,9 +1,15 @@
-package lessons;
+package lessons.vehicle;
 
+import lessons.person.Person;
+import lessons.Refuelable;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
 public class Car extends Vehicle implements Refuelable {
+
+    private static final Logger LOGGER = LogManager.getLogger(Car.class);
 
     private String brand;
     private String model;
@@ -12,18 +18,8 @@ public class Car extends Vehicle implements Refuelable {
     private int passengers;
     private Boolean offRoad;
 
-    public Car(int size,
-               String color,
-               LocalDateTime creationDate,
-               Person driver,
-               String brand,
-               String model,
-               int door,
-               int compartment,
-               int passengers,
-               Boolean offRoad
-    ) {
-        super(size, color, creationDate, driver);
+    public Car(int size, String color, LocalDateTime creationDate, Person driver, String brand, String model,
+               int door, int compartment, int passengers, Boolean offRoad) {
         this.brand = brand;
         this.model = model;
         this.door = door;
@@ -87,19 +83,19 @@ public class Car extends Vehicle implements Refuelable {
     @Override
     public void openTheFuelTank() {
 
-        System.out.println("The fuel tank is opened.");
+        LOGGER.debug("The fuel tank is opened.");
     }
 
     @Override
     public void refuelCar() {
 
-        System.out.println("car is refueling...");
+        LOGGER.debug("car is refueling...");
     }
 
     @Override
     public void closeTheFuelTank() {
 
-        System.out.println("The fuel tank is closed.");
+        LOGGER.debug("The fuel tank is closed.");
     }
 
     @Override
@@ -114,7 +110,7 @@ public class Car extends Vehicle implements Refuelable {
     }
 
     @Override
-    int object(int o1, int o2, int o3) {
+    public int object(int o1, int o2, int o3) {
         return 0;
     }
 
@@ -123,7 +119,7 @@ public class Car extends Vehicle implements Refuelable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Car car = (Car) o;
-        return door == car.door && compartment == car.compartment && passengers == car.passengers && Objects.equals(brand, car.brand) && Objects.equals(model, car.model);
+        return door == car.door && Objects.equals(brand, car.brand) && Objects.equals(model, car.model);
     }
 
     @Override

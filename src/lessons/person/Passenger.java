@@ -1,41 +1,40 @@
-package lessons;
+package lessons.person;
 
+import lessons.Humanity;
+import lessons.Ticket;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import java.util.Objects;
 
 public class Passenger extends Person implements Humanity {
 
+    private static final Logger LOGGER = LogManager.getLogger(Passenger.class);
+
     private Ticket ticket;
 
-    public Passenger(int age,
-                     String name,
-                     String surname,
-                     String hairColor,
-                     String eyeColor,
-                     int height,
-                     int weight,
-                     Ticket ticket
-    ) {
-        super(age, name, surname, hairColor, eyeColor, height, weight, "Passenger");
+    public Passenger(int age, String name, String surname, String hairColor, String eyeColor, int height,
+                     int weight, Ticket ticket) {
+        super(age, hairColor, eyeColor);
         this.ticket = ticket;
     }
 
     @Override
     public void walk() {
-        System.out.println("Walking");
+        LOGGER.debug("Walking");
     }
 
     @Override
     public void run() {
-        System.out.println("Running");
+        LOGGER.debug("Running");
     }
 
     @Override
     public void talk() {
-        System.out.println("Talking");
+        LOGGER.debug("Talking");
     }
 
     @Override
-    int something(int n1, int n2) {
+    public int something(int n1, int n2) {
         return 0;
     }
 

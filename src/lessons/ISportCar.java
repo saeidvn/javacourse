@@ -2,10 +2,10 @@ package lessons;
 
 public interface ISportCar {
 
-    void body();
+    void changeBody();
 
-    void soundSystem();
+    void upgradeSoundSystem();
 
-    void wheels();
+    void changeWheels();
 
 }

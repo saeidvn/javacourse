@@ -1,8 +1,12 @@
 package lessons;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import java.util.Objects;
 
 public class Wagon {
+
+    private static final Logger LOGGER = LogManager.getLogger(Wagon.class);
 
     private String wagonName;
     private int wagonId;
@@ -13,7 +17,7 @@ public class Wagon {
     }
 
     public void showData() {
-        System.out.println("Wagon Name is: " + wagonName + ", " + "Wagon Id is: " + wagonId);
+        LOGGER.debug("Wagon Name is: " + wagonName + ", " + "Wagon Id is: " + wagonId);
         System.out.println();
     }
 

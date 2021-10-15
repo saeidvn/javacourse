@@ -1,20 +1,14 @@
-package lessons;
+package lessons.person;
 
 public class CarDriver extends Person {
 
-    public CarDriver(int age,
-                     String name,
-                     String surname,
-                     String hairColor,
-                     String eyeColor,
-                     int height,
-                     int weight
-    ) {
-        super(age, name, surname, hairColor, eyeColor, height, weight, "Car Driver");
+    public CarDriver(int age, String name, String surname, String hairColor, String eyeColor, int height,
+                     int weight) {
+        super(age, hairColor, eyeColor);
     }
 
     @Override
-    int something(int n1, int n2) {
+    public int something(int n1, int n2) {
         return 0;
     }
 

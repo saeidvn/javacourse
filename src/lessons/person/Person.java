@@ -1,4 +1,6 @@
-package lessons;
+package lessons.person;
+
+import lessons.InvalidException;
 
 import java.util.Objects;
 
@@ -13,30 +15,20 @@ public abstract class Person {
     private int weight;
     private String job;
 
-    public Person(int age,
-                  String name,
-                  String surname,
-                  String hairColor,
-                  String eyeColor,
-                  int height,
-                  int weight,
-                  String job
-    ) {
+    public Person(int age, String hairColor, String eyeColor) {
         this.age = age;
-        this.name = name;
-        this.surname = surname;
         this.hairColor = hairColor;
         this.eyeColor = eyeColor;
-        this.height = height;
-        this.weight = weight;
-        this.job = job;
     }
 
     public int getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(int age) throws InvalidException {
+        if (age < 18){
+            throw new InvalidException("A lessons.person has an age less than 18");
+        }
         this.age = age;
     }
 
@@ -112,7 +104,7 @@ public abstract class Person {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Person person = (Person) o;
-        return age == person.age && height == person.height && weight == person.weight && Objects.equals(name, person.name) && Objects.equals(surname, person.surname);
+        return age == person.age && Objects.equals(name, person.name) && Objects.equals(surname, person.surname);
     }
 
     @Override

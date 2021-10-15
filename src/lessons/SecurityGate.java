@@ -1,5 +1,8 @@
 package lessons;
 
+import lessons.person.Police;
+
+import java.util.List;
 import java.util.Objects;
 
 public class SecurityGate {
@@ -8,9 +11,9 @@ public class SecurityGate {
     private Police police;
     private int id;
 
-    public SecurityGate(Boolean safe, Police police, int id) {
-        this.safe = safe;
-        this.police = police;
+    private List<String> gates;
+
+    public SecurityGate(int id) {
         this.id = id;
     }
 

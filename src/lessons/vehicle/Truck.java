@@ -1,26 +1,23 @@
-package lessons;
+package lessons.vehicle;
+
+import lessons.MainClass;
+import lessons.person.Person;
+import lessons.Refuelable;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.time.LocalDateTime;
 import java.util.Objects;
 
 public class Truck extends Car implements Refuelable {
 
+    private static final Logger LOGGER = LogManager.getLogger(MainClass.class);
+
     private String type;
     private int height;
 
-    public Truck(
-            int size,
-            String color,
-            LocalDateTime creationDate,
-            Person driver,
-            String brand,
-            String model,
-            int door,
-            int compartment,
-            int passengers,
-            String type,
-            int height
-    ) {
+    public Truck(int size, String color, LocalDateTime creationDate, Person driver, String brand, String model,
+            int door, int compartment, int passengers, String type, int height) {
         super(size, color, creationDate, driver, brand, model, door, compartment, passengers, false);
         this.type = type;
         this.height = height;
@@ -45,19 +42,19 @@ public class Truck extends Car implements Refuelable {
     @Override
     public void openTheFuelTank() {
 
-        System.out.println("The fuel tank is opened.");
+        LOGGER.debug("The fuel tank is opened.");
     }
 
     @Override
     public void refuelCar() {
 
-        System.out.println("car is refueling...");
+        LOGGER.debug("car is refueling...");
     }
 
     @Override
     public void closeTheFuelTank() {
 
-        System.out.println("The fuel tank is closed.");
+        LOGGER.debug("The fuel tank is closed.");
     }
 
     @Override

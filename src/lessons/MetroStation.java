@@ -1,5 +1,9 @@
 package lessons;
 
+import lessons.person.TicketControl;
+import lessons.person.TicketCounter;
+import lessons.vehicle.Metro;
+
 import java.util.Objects;
 
 public class MetroStation {
@@ -10,16 +14,8 @@ public class MetroStation {
     private SecurityGate securityGate;
     private Metro metro;
 
-    public MetroStation(int entrance,
-                        TicketCounter ticketCounter,
-                        TicketControl ticketControl,
-                        SecurityGate securityGate,
-                        Metro metro
-    ) {
+    public MetroStation(int entrance, Metro metro) {
         this.entrance = entrance;
-        this.ticketCounter = ticketCounter;
-        this.ticketControl = ticketControl;
-        this.securityGate = securityGate;
         this.metro = metro;
     }
 

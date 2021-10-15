@@ -1,9 +1,18 @@
-package lessons;
+package lessons.vehicle;
+
+import lessons.IEngine;
+import lessons.ISportCar;
+import lessons.person.Person;
+import lessons.Refuelable;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.time.LocalDateTime;
 import java.util.Objects;
 
 public class Sedan extends Car implements Refuelable, IEngine, ISportCar {
+
+    private static final Logger LOGGER = LogManager.getLogger(Sedan.class);
 
     private int engineVolume = 0;
     private int cylinders = 0;
@@ -11,18 +20,8 @@ public class Sedan extends Car implements Refuelable, IEngine, ISportCar {
     private int gear = 1;
     private Boolean trunk;
 
-    public Sedan(
-            int size,
-            String color,
-            LocalDateTime creationDate,
-            Person driver,
-            String brand,
-            String model,
-            int door,
-            int compartment,
-            int passengers,
-            Boolean trunk
-    ) {
+    public Sedan(int size, String color, LocalDateTime creationDate, Person driver, String brand, String model,
+            int door, int compartment, int passengers, Boolean trunk) {
         super(size, color, creationDate, driver, brand, model, door, compartment, passengers, false);
         this.trunk = trunk;
     }
@@ -37,17 +36,17 @@ public class Sedan extends Car implements Refuelable, IEngine, ISportCar {
 
     @Override
     public void openTheFuelTank() {
-        System.out.println("The fuel tank is opened.");
+        LOGGER.debug("The fuel tank is opened.");
     }
 
     @Override
     public void refuelCar() {
-        System.out.println("car is refueling...");
+        LOGGER.debug("car is refueling...");
     }
 
     @Override
     public void closeTheFuelTank() {
-        System.out.println("The fuel tank is closed.");
+        LOGGER.debug("The fuel tank is closed.");
     }
 
     @Override
@@ -71,15 +70,15 @@ public class Sedan extends Car implements Refuelable, IEngine, ISportCar {
     }
 
     @Override
-    public void body() {
+    public void changeBody() {
     }
 
     @Override
-    public void soundSystem() {
+    public void upgradeSoundSystem() {
     }
 
     @Override
-    public void wheels() {
+    public void changeWheels() {
     }
 
     @Override

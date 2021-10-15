@@ -1,4 +1,6 @@
-package lessons;
+package lessons.vehicle;
+
+import lessons.person.Person;
 
 import java.time.LocalDateTime;
 import java.util.Objects;
@@ -9,13 +11,6 @@ public abstract class Vehicle {
     private String color;
     private LocalDateTime creationDate;
     private Person driver;
-
-    public Vehicle(int size, String color, LocalDateTime creationDate, Person driver) {
-        this.size = size;
-        this.color = color;
-        this.creationDate = creationDate;
-        this.driver = driver;
-    }
 
     public int getSize() {
         return size;

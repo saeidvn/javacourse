@@ -1,0 +1,71 @@
+2021-10-15 14:35:13,137 DEBUG l.MainClass [main] Wagon number 1: 
+2021-10-15 14:35:13,169 DEBUG l.Wagon [main] Wagon Name is: Wagon, Wagon Id is: 1
+2021-10-15 14:35:13,202 DEBUG l.Wagon [main] Wagon Name is: Wagon, Wagon Id is: 3
+2021-10-15 14:35:13,203 DEBUG l.MainClass [main] Andy
+2021-10-15 14:35:13,203 DEBUG l.MainClass [main] TicketCounter{surname='Romanovic', eyeColor='Brown', job='Ticket Counter'}
+2021-10-15 14:35:13,204 DEBUG l.MainClass [main] Police{hairColor='Black'}
+2021-10-15 14:35:13,209 DEBUG l.MainClass [main] true
+2021-10-15 14:35:13,210 DEBUG l.MainClass [main] 2843
+2021-10-15 14:35:13,210 DEBUG l.v.Suv [main] The fuel tank is opened.
+2021-10-15 14:35:13,210 DEBUG l.v.Suv [main] car is refueling...
+2021-10-15 14:35:13,211 DEBUG l.v.Suv [main] The fuel tank is closed.
+2021-10-15 14:35:13,211 DEBUG l.MainClass [main] false
+2021-10-15 14:35:13,213 DEBUG l.MainClass [main] 2023-09-10T00:00
+2021-10-15 14:35:13,214 DEBUG l.MainClass [main] Passenger{age=44, name='Sonia', surname='Jackson'}
+2021-10-15 14:35:13,214 DEBUG l.MainClass [main] Suv{engineVolume=3500, cylinders=8, speed=280, gear=6, tireSize=21, offRoad=true}
+2021-10-15 14:35:13,215 DEBUG l.MainClass [main] [Llessons.person.Police;@58c1c010
+2021-10-15 14:35:13,215 DEBUG l.MainClass [main] [Llessons.person.Police;@58c1c010
+2021-10-15 14:35:13,215 DEBUG l.MainClass [main] [Llessons.person.Police;@58c1c010
+2021-10-15 14:35:13,216 DEBUG l.MainClass [main] [Llessons.person.Police;@58c1c010
+2021-10-15 14:35:13,216 DEBUG l.MainClass [main] [Llessons.person.Police;@58c1c010
+2021-10-15 14:35:13,217 DEBUG l.MainClass [main] [Llessons.person.Police;@58c1c010
+2021-10-15 14:35:13,217 DEBUG l.MainClass [main] Policeman: 
+2021-10-15 14:35:13,217 DEBUG l.MainClass [main] Police ID is: 1 and Police name is: Policeman 0
+2021-10-15 14:35:13,218 DEBUG l.MainClass [main] CarDriver{age=17, name='Chris', surname='Redfield', hairColor='Gold', eyeColor='Gold', height=187, weight=90, job='Car Driver'}
+2021-10-15 15:50:23,894 DEBUG l.MainClass [main] false
+2021-10-15 15:50:23,903 DEBUG l.MainClass [main] Wagon number 1: 
+2021-10-15 15:50:23,903 DEBUG l.Wagon [main] Wagon Name is: Wagon, Wagon Id is: 1
+2021-10-15 15:50:23,929 DEBUG l.MainClass [main] Andy
+2021-10-15 15:50:23,929 DEBUG l.MainClass [main] TicketCounter{surname='Romanovic', eyeColor='Brown', job='Ticket Counter'}
+2021-10-15 15:50:23,930 DEBUG l.MainClass [main] Police{hairColor='Black'}
+2021-10-15 15:50:23,933 DEBUG l.MainClass [main] true
+2021-10-15 15:50:23,934 DEBUG l.MainClass [main] 2843
+2021-10-15 15:50:23,934 DEBUG l.v.Suv [main] The fuel tank is opened.
+2021-10-15 15:50:23,934 DEBUG l.v.Suv [main] car is refueling...
+2021-10-15 15:50:23,935 DEBUG l.v.Suv [main] The fuel tank is closed.
+2021-10-15 15:50:23,935 DEBUG l.MainClass [main] false
+2021-10-15 15:50:23,936 DEBUG l.MainClass [main] 2023-09-10T00:00
+2021-10-15 15:50:23,937 DEBUG l.MainClass [main] Passenger{age=44, name='Sonia', surname='Jackson'}
+2021-10-15 15:50:23,937 DEBUG l.MainClass [main] Suv{engineVolume=3500, cylinders=8, speed=280, gear=6, tireSize=21, offRoad=true}
+2021-10-15 15:50:23,938 DEBUG l.MainClass [main] [Llessons.person.Police;@23a5fd2
+2021-10-15 15:50:23,938 DEBUG l.MainClass [main] [Llessons.person.Police;@23a5fd2
+2021-10-15 15:50:23,938 DEBUG l.MainClass [main] [Llessons.person.Police;@23a5fd2
+2021-10-15 15:50:23,938 DEBUG l.MainClass [main] [Llessons.person.Police;@23a5fd2
+2021-10-15 15:50:23,939 DEBUG l.MainClass [main] [Llessons.person.Police;@23a5fd2
+2021-10-15 15:50:23,939 DEBUG l.MainClass [main] [Llessons.person.Police;@23a5fd2
+2021-10-15 15:50:23,939 DEBUG l.MainClass [main] Policeman: 
+2021-10-15 15:50:23,940 DEBUG l.MainClass [main] Police ID is: 1 and Police name is: Policeman 0
+2021-10-15 15:50:23,940 DEBUG l.MainClass [main] CarDriver{age=17, name='Chris', surname='Redfield', hairColor='Gold', eyeColor='Gold', height=187, weight=90, job='Car Driver'}
+2021-10-15 15:51:58,804 DEBUG l.MainClass [main] Wagon number 1: 
+2021-10-15 15:51:58,809 DEBUG l.Wagon [main] Wagon Name is: Wagon, Wagon Id is: 1
+2021-10-15 15:51:58,849 DEBUG l.MainClass [main] Andy
+2021-10-15 15:51:58,849 DEBUG l.MainClass [main] TicketCounter{surname='Romanovic', eyeColor='Brown', job='Ticket Counter'}
+2021-10-15 15:51:58,850 DEBUG l.MainClass [main] Police{hairColor='Black'}
+2021-10-15 15:51:58,854 DEBUG l.MainClass [main] true
+2021-10-15 15:51:58,855 DEBUG l.MainClass [main] 2843
+2021-10-15 15:51:58,855 DEBUG l.v.Suv [main] The fuel tank is opened.
+2021-10-15 15:51:58,856 DEBUG l.v.Suv [main] car is refueling...
+2021-10-15 15:51:58,856 DEBUG l.v.Suv [main] The fuel tank is closed.
+2021-10-15 15:51:58,856 DEBUG l.MainClass [main] false
+2021-10-15 15:51:58,858 DEBUG l.MainClass [main] 2023-09-10T00:00
+2021-10-15 15:51:58,860 DEBUG l.MainClass [main] Passenger{age=44, name='Sonia', surname='Jackson'}
+2021-10-15 15:51:58,860 DEBUG l.MainClass [main] Suv{engineVolume=3500, cylinders=8, speed=280, gear=6, tireSize=21, offRoad=true}
+2021-10-15 15:51:58,861 DEBUG l.MainClass [main] [Llessons.person.Police;@23a5fd2
+2021-10-15 15:51:58,861 DEBUG l.MainClass [main] [Llessons.person.Police;@23a5fd2
+2021-10-15 15:51:58,862 DEBUG l.MainClass [main] [Llessons.person.Police;@23a5fd2
+2021-10-15 15:51:58,862 DEBUG l.MainClass [main] [Llessons.person.Police;@23a5fd2
+2021-10-15 15:51:58,862 DEBUG l.MainClass [main] [Llessons.person.Police;@23a5fd2
+2021-10-15 15:51:58,862 DEBUG l.MainClass [main] [Llessons.person.Police;@23a5fd2
+2021-10-15 15:51:58,863 DEBUG l.MainClass [main] Policeman: 
+2021-10-15 15:51:58,863 DEBUG l.MainClass [main] Police ID is: 1 and Police name is: Policeman 0
+2021-10-15 15:51:58,863 DEBUG l.MainClass [main] CarDriver{age=17, name='Chris', surname='Redfield', hairColor='Gold', eyeColor='Gold', height=187, weight=90, job='Car Driver'}
