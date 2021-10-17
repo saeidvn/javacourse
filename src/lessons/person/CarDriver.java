@@ -2,8 +2,7 @@ package lessons.person;
 
 public class CarDriver extends Person {
 
-    public CarDriver(int age, String name, String surname, String hairColor, String eyeColor, int height,
-                     int weight) {
+    public CarDriver(int age, String hairColor, String eyeColor) {
         super(age, hairColor, eyeColor);
     }
 

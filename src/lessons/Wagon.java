@@ -7,26 +7,24 @@ import java.util.Objects;
 public class Wagon {
 
     private static final Logger LOGGER = LogManager.getLogger(Wagon.class);
-
     private String wagonName;
-    private int wagonId;
-
-    public Wagon(String wagonName, int wagonId) {
-        this.wagonName = wagonName;
-        this.wagonId = wagonId;
-    }
-
-    public void showData() {
-        LOGGER.debug("Wagon Name is: " + wagonName + ", " + "Wagon Id is: " + wagonId);
-        System.out.println();
-    }
-
+    private int id;
     private int seats;
     private int number;
 
     public Wagon(int seats, int number) {
         this.seats = seats;
         this.number = number;
+    }
+
+    public Wagon(String wagonName, int wagonId) {
+        this.wagonName = wagonName;
+        this.id = wagonId;
+    }
+
+    public void showData() {
+        LOGGER.debug("Wagon Name is: " + wagonName + ", " + "Wagon Id is: " + id);
+        System.out.println();
     }
 
     public int getSeats() {

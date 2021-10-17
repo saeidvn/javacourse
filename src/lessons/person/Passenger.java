@@ -9,11 +9,9 @@ import java.util.Objects;
 public class Passenger extends Person implements Humanity {
 
     private static final Logger LOGGER = LogManager.getLogger(Passenger.class);
-
     private Ticket ticket;
 
-    public Passenger(int age, String name, String surname, String hairColor, String eyeColor, int height,
-                     int weight, Ticket ticket) {
+    public Passenger(int age, String hairColor, String eyeColor, Ticket ticket) {
         super(age, hairColor, eyeColor);
         this.ticket = ticket;
     }

@@ -1,16 +1,17 @@
 package lessons;
 
-public class Store<E extends CarObject, T, S> {
+import java.util.List;
 
-    private E[] data;
+public class Store<E extends CarObject, T> {
+
+    private List<E> data;
     private T otherData;
-    private S changeFilter;
 
-    public E[] getData() {
+    public List<E> getData() {
         return data;
     }
 
-    public void setData(E[] data) {
+    public void setData(List<E> data) {
         this.data = data;
     }
 
@@ -22,11 +23,4 @@ public class Store<E extends CarObject, T, S> {
         this.otherData = otherData;
     }
 
-    public S getChangeFilter() {
-        return changeFilter;
-    }
-
-    public void setChangeFilter(S changeFilter) {
-        this.changeFilter = changeFilter;
-    }
 }

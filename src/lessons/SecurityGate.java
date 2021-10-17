@@ -10,7 +10,6 @@ public class SecurityGate {
     private Boolean safe;
     private Police police;
     private int id;
-
     private List<String> gates;
 
     public SecurityGate(int id) {

@@ -12,7 +12,6 @@ import java.util.Objects;
 public class Truck extends Car implements Refuelable {
 
     private static final Logger LOGGER = LogManager.getLogger(MainClass.class);
-
     private String type;
     private int height;
 

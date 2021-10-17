@@ -13,11 +13,10 @@ import java.util.Objects;
 public class Sedan extends Car implements Refuelable, IEngine, ISportCar {
 
     private static final Logger LOGGER = LogManager.getLogger(Sedan.class);
-
-    private int engineVolume = 0;
-    private int cylinders = 0;
-    private int speed = 0;
-    private int gear = 1;
+    private int engineVolume;
+    private int cylinders;
+    private int speed;
+    private int gear;
     private Boolean trunk;
 
     public Sedan(int size, String color, LocalDateTime creationDate, Person driver, String brand, String model,

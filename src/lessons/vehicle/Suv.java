@@ -13,7 +13,6 @@ import java.util.Objects;
 public class Suv extends Car implements Refuelable, IEngine, ISportCar {
 
     private static final Logger LOGGER = LogManager.getLogger(Suv.class);
-
     private int engineVolume;
     private int cylinders;
     private int speed;

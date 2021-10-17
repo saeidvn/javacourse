@@ -2,8 +2,7 @@ package lessons.person;
 
 public class MetroDriver extends Person {
 
-    public MetroDriver(int age, String name, String surname, String hairColor, String eyeColor, int height,
-                       int weight) {
+    public MetroDriver(int age, String hairColor, String eyeColor) {
         super(age, hairColor, eyeColor);
     }
 

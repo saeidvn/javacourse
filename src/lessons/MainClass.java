@@ -21,18 +21,23 @@ public class MainClass {
 
     public static void main(String[] args) {
 
-        TicketCounter ticketCounter1 = new TicketCounter(21, "Roma", "Romanovic",
-                "Black", "Brown", 180, 80);
-        TicketControl ticketControl = new TicketControl(27, "Igor", "Igorovic",
-                "Brown", "Black", 175, 90);
+        TicketCounter ticketCounter1 = new TicketCounter(21, "Yellow", "Red");
+        ticketCounter1.setSurname("Jackson");
+        ticketCounter1.setJob("new job");
+
+        TicketControl ticketControl = new TicketControl(27, "Sky", "Sky");
         Police police1 = new Police(30, "Viktor", "Viktorovic", "Black",
                 "Black", 170, 65);
 
         List<String> gateList = new ArrayList<>();
         SecurityGate securityGate1 = new SecurityGate(1);
 
+
         MetroDriver metroDriver1 = new MetroDriver(45,
-                "Andy", "Carter", "Red", "Green", 174, 55);
+                "Black", "Brown");
+
+        metroDriver1.setName("Andy");
+
         Wagon wagon1 = new Wagon(200, 6);
 
         List<String> wagonList = new ArrayList<>();
@@ -52,15 +57,18 @@ public class MainClass {
         wagons[0].showData();
 
         Metro metro1 = new Metro();
-
+        metro1.setWagons(wagonList);
+        metro1.setDriver(metroDriver1);
         MetroStation minsk = new MetroStation(1, metro1);
-        minsk.getMetro().getWagons().get(2);
+        minsk.setTicketCounter(ticketCounter1);
+        minsk.setSecurityGate(securityGate1);
+        securityGate1.setPolice(police1);
+        LOGGER.debug(minsk.getMetro().getWagons().get(2));
         LOGGER.debug(minsk.getMetro().getDriver().getName());
         LOGGER.debug(minsk.getTicketCounter().toString());
         LOGGER.debug(minsk.getSecurityGate().getPolice().toString());
 
-        CarDriver carDriver1 = new CarDriver(35, "Jack", "Hamilton",
-                "Sky", "Yellow", 168, 70);
+        CarDriver carDriver1 = new CarDriver(30, "Gray", "Gray");
         Suv suv = new Suv(100, "Purple", LocalDateTime.now(), carDriver1, "BMW",
                 "X6", 5, 2, 21, 5);
         LOGGER.debug(suv.equals(suv));
@@ -76,14 +84,12 @@ public class MainClass {
         suv.equals(mySuv);
         LOGGER.debug(suv.equals(mySuv));
 
-        Person person = new Passenger(20, "Jax", "Jackson", "Black",
-                "White", 190, 120, new Ticket(LocalDateTime.now(), 1));
-        Passenger passenger = new Passenger(44, "Sonia", "Jackson", "Gold",
-                "Sky", 175, 60,
-                new Ticket(
-                        LocalDateTime.of(2023, 9, 10, 0, 0,
-                                0, 0), 12)
-        );
+        Person person = new Passenger(20, "Gold", "Green",
+                new Ticket(LocalDateTime.of(2023, 9, 10, 0, 0,
+                        0, 0), 12));
+        Passenger passenger = new Passenger(44, "White", "Red", new Ticket(
+                LocalDateTime.of(2023, 9, 10, 0, 0, 0,
+                        0), 12));
         LOGGER.debug(passenger.getTicket().getExpireDate());
         LOGGER.debug(passenger);
         LOGGER.debug(suv);
@@ -104,19 +110,41 @@ public class MainClass {
         policeMan[0].showData();
         minsk.getSecurityGate().getPolice();
 
-        CarDriver human = new CarDriver(17, "Chris", "Redfield", "Gold",
-                "Blue", 187, 90);
+        CarDriver human = new CarDriver(27, "Purple", "Green");
         LOGGER.debug(human);
 
         BodyObject frontSpoiler = new BodyObject();
         BodyObject rearSpoiler = new BodyObject();
         BodyObject frontTire = new BodyObject();
         BodyObject rearTire = new BodyObject();
-        BodyObject[] bodyObjects = {frontSpoiler, rearSpoiler, frontTire, rearTire};
+        List<BodyObject> bodyObjects = new ArrayList<>();
+        frontSpoiler.setManufacture("Japan");
+        frontTire.setManufacture("Korea");
+        rearSpoiler.setColor("Black");
+
+        bodyObjects.add(frontSpoiler);
+        bodyObjects.add(rearSpoiler);
+        bodyObjects.add(frontTire);
+        bodyObjects.add(rearTire);
+
         AudioObject speaker = new AudioObject();
-        Store<BodyObject, AudioObject, BodyObject> store = new Store<>();
+        Store<BodyObject, AudioObject> store = new Store<>();
         store.setData(bodyObjects);
         store.setOtherData(speaker);
+        LOGGER.debug(store);
+
+        CarWash carWash = new CarWash();
+        List<String> serviceList = new ArrayList<>();
+        serviceList.add("Interior");
+        serviceList.add("Exterior");
+        serviceList.add("Full");
+        carWash.setService(serviceList);
+        LOGGER.debug(carWash.getService());
+
+        ServiceStation serviceStation = new ServiceStation();
+        serviceStation.setType("Change oil");
+        serviceStation.getType();
+        LOGGER.debug(serviceStation.getType());
 
         Map<String, BodyObject> objects = new HashMap<>();
         objects.put("frontSpoiler", frontSpoiler);
@@ -127,17 +155,18 @@ public class MainClass {
         objects.putIfAbsent("rearWheel", rearTire);
         boolean tireExists = objects.containsKey("frontTire");
         boolean spoilerExists = objects.containsKey("rearSpoiler");
-        objects.entrySet();
 
-        objects.values();
         List<String> objectList = new ArrayList<>();
 
         Map<String, AudioObject> audioObjects = new HashMap<>();
         audioObjects.put("speaker", speaker);
-        audioObjects.isEmpty();
+        LOGGER.debug("The Mappings are: " + audioObjects);
+        LOGGER.debug("Is the map empty? " + audioObjects.isEmpty());
 
-
+        for(Map.Entry<String, BodyObject> entry : objects.entrySet()) {
+            LOGGER.debug(entry.getKey());
+            LOGGER.debug(entry.getValue());
+        }
 
     }
-
 }

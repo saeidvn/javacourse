@@ -5,21 +5,18 @@ import lessons.Playable;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Police extends Person implements Playable {
 
     private List<String> officers;
-
     private static final Logger LOGGER = LogManager.getLogger(MainClass.class);
-
-    private int policeId;
+    private int id;
     private String policeName;
 
     public Police(int policeId, String policeName) {
         super(0, "Black", "Brown");
-        this.policeId = policeId;
+        this.id = policeId;
         this.policeName = policeName;
     }
 
@@ -32,7 +29,7 @@ public class Police extends Person implements Playable {
     }
 
     public void showData() {
-        LOGGER.debug("Police ID is: " + policeId + " and " + "Police name is: " + policeName);
+        LOGGER.debug("Police ID is: " + id + " and " + "Police name is: " + policeName);
         System.out.println();
     }
 

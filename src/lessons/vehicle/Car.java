@@ -10,7 +10,6 @@ import java.util.Objects;
 public class Car extends Vehicle implements Refuelable {
 
     private static final Logger LOGGER = LogManager.getLogger(Car.class);
-
     private String brand;
     private String model;
     private int door;

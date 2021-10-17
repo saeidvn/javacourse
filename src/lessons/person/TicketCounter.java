@@ -2,8 +2,7 @@ package lessons.person;
 
 public class TicketCounter extends Person {
 
-    public TicketCounter(int age, String name, String surname, String hairColor, String eyeColor, int height,
-                         int weight) {
+    public TicketCounter(int age, String hairColor, String eyeColor) {
         super(age, hairColor, eyeColor);
     }
 
