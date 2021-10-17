@@ -40,6 +40,14 @@ public class SecurityGate {
         this.id = id;
     }
 
+    public List<String> getGates() {
+        return gates;
+    }
+
+    public void setGates(List<String> gates) {
+        this.gates = gates;
+    }
+
     @Override
     public String toString() {
         return "SecurityGate{" +

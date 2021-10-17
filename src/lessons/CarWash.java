@@ -6,13 +6,13 @@ import java.util.List;
 
 public class CarWash<W extends Car> {
 
-    private List<W> service;
+    private List<W> services;
 
-    public List<W> getService() {
-        return service;
+    public List<W> getServices() {
+        return services;
     }
 
-    public void setService(List<W> service) {
-        this.service = service;
+    public void setServices(List<W> services) {
+        this.services = services;
     }
 }

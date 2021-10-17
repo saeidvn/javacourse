@@ -54,6 +54,7 @@ public class MainClass {
         wagons[5] = new Wagon("Wagon", 06);
 
         LOGGER.debug("Wagon number 1: ");
+
         wagons[0].showData();
 
         Metro metro1 = new Metro();
@@ -63,6 +64,7 @@ public class MainClass {
         minsk.setTicketCounter(ticketCounter1);
         minsk.setSecurityGate(securityGate1);
         securityGate1.setPolice(police1);
+
         LOGGER.debug(minsk.getMetro().getWagons().get(2));
         LOGGER.debug(minsk.getMetro().getDriver().getName());
         LOGGER.debug(minsk.getTicketCounter().toString());
@@ -71,6 +73,7 @@ public class MainClass {
         CarDriver carDriver1 = new CarDriver(30, "Gray", "Gray");
         Suv suv = new Suv(100, "Purple", LocalDateTime.now(), carDriver1, "BMW",
                 "X6", 5, 2, 21, 5);
+
         LOGGER.debug(suv.equals(suv));
         LOGGER.debug(suv.hashCode());
 
@@ -82,6 +85,12 @@ public class MainClass {
         mySuv.isSuv();
 
         suv.equals(mySuv);
+
+        List<Suv> suvCars = new ArrayList<>();
+        suvCars.add(suv);
+        suvCars.add(mySuv);
+
+        LOGGER.debug(suvCars);
         LOGGER.debug(suv.equals(mySuv));
 
         Person person = new Passenger(20, "Gold", "Green",
@@ -90,6 +99,7 @@ public class MainClass {
         Passenger passenger = new Passenger(44, "White", "Red", new Ticket(
                 LocalDateTime.of(2023, 9, 10, 0, 0, 0,
                         0), 12));
+
         LOGGER.debug(passenger.getTicket().getExpireDate());
         LOGGER.debug(passenger);
         LOGGER.debug(suv);
@@ -103,14 +113,18 @@ public class MainClass {
 
         for (int i = 0; i < policeMan.length; i++) {
             policeMan[i] = new Police(i+1,"Policeman " + i);
+
             LOGGER.debug(policeMan);
         }
 
         LOGGER.debug("Policeman: ");
+
         policeMan[0].showData();
+
         minsk.getSecurityGate().getPolice();
 
         CarDriver human = new CarDriver(27, "Purple", "Green");
+
         LOGGER.debug(human);
 
         BodyObject frontSpoiler = new BodyObject();
@@ -131,19 +145,23 @@ public class MainClass {
         Store<BodyObject, AudioObject> store = new Store<>();
         store.setData(bodyObjects);
         store.setOtherData(speaker);
+
         LOGGER.debug(store);
 
-        CarWash carWash = new CarWash();
+        CarWash<Suv> carWash = new CarWash<Suv>();
         List<String> serviceList = new ArrayList<>();
         serviceList.add("Interior");
         serviceList.add("Exterior");
         serviceList.add("Full");
-        carWash.setService(serviceList);
-        LOGGER.debug(carWash.getService());
+        carWash.setServices(suvCars);
 
-        ServiceStation serviceStation = new ServiceStation();
+        LOGGER.debug(serviceList);
+        LOGGER.debug(carWash.getServices());
+
+        ServiceStation<String> serviceStation = new ServiceStation<>();
         serviceStation.setType("Change oil");
         serviceStation.getType();
+
         LOGGER.debug(serviceStation.getType());
 
         Map<String, BodyObject> objects = new HashMap<>();
@@ -160,10 +178,12 @@ public class MainClass {
 
         Map<String, AudioObject> audioObjects = new HashMap<>();
         audioObjects.put("speaker", speaker);
+
         LOGGER.debug("The Mappings are: " + audioObjects);
         LOGGER.debug("Is the map empty? " + audioObjects.isEmpty());
 
         for(Map.Entry<String, BodyObject> entry : objects.entrySet()) {
+
             LOGGER.debug(entry.getKey());
             LOGGER.debug(entry.getValue());
         }
